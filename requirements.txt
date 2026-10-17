@@ -1,0 +1,22 @@
+# Verified on 2026-10-15 against the installed environment:
+#   Python 3.10.5 (Windows 11), torch 2.1.0+cu121, CUDA 12.1, RTX 3050 4 GB.
+#
+# torch/torchvision must come from the PyTorch index matching your hardware:
+#   CUDA 12.1: pip install torch==2.1.0 torchvision==0.16.0 --index-url https://download.pytorch.org/whl/cu121
+#   CPU only : pip install torch==2.1.0 torchvision==0.16.0 --index-url https://download.pytorch.org/whl/cpu
+# Then: pip install -r requirements.txt
+torch==2.1.0
+torchvision==0.16.0
+timm==1.0.24
+opencv-python==4.8.1.78
+numpy==1.26.2
+pandas==2.2.3
+scikit-learn==1.6.1
+scipy==1.15.2
+PyYAML==6.0.3
+matplotlib==3.10.1
+Pillow==10.1.0
+pytest==8.4.2
+# Perceptual hashing is implemented in-repo (OpenCV DCT), so `imagehash` is not needed.
+# Optional UI (inference/app.py), not installed in the verified environment:
+# streamlit

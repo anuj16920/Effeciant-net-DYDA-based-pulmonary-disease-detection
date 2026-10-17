@@ -1,0 +1,94 @@
+2026-10-16 15:08:20,532 INFO __main__: CV hybrid (E4) on cuda, folds [0, 1, 2]
+2026-10-16 15:08:20,556 INFO datasets.dataset: Allocating 24.74 GB of pinned RAM tensors (3 bank(s) for 14709 images)...
+2026-10-16 15:08:31,489 INFO datasets.dataset: Pre-loading and populating 14709 images into pinned RAM tensor banks...
+2026-10-16 15:11:56,952 INFO datasets.dataset: Successfully populated 24.74 GB pinned RAM cache! Ultra-fast zero-latency active.
+2026-10-16 15:11:56,957 INFO datasets.dataset: Allocating 2.06 GB of pinned RAM tensors (1 bank(s) for 3677 images)...
+2026-10-16 15:11:59,148 INFO datasets.dataset: Pre-loading and populating 3677 images into pinned RAM tensor banks...
+2026-10-16 15:12:47,341 INFO datasets.dataset: Successfully populated 2.06 GB pinned RAM cache! Ultra-fast zero-latency active.
+2026-10-16 15:12:47,481 INFO timm.models._builder: Loading pretrained weights from Hugging Face hub (timm/efficientnet_b3.ra2_in1k)
+2026-10-16 15:12:47,864 INFO httpx2: HTTP Request: HEAD https://huggingface.co/timm/efficientnet_b3.ra2_in1k/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+2026-10-16 15:12:47,865 WARNING huggingface_hub.utils._http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-10-16 15:12:47,906 INFO timm.models._hub: [timm/efficientnet_b3.ra2_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2026-10-16 15:12:47,956 INFO models.hybrid_model: Built hybrid (E4): 13,074,752 params, backbone pretrained=True
+2026-10-16 15:17:33,952 INFO training.trainer: fold 0 epoch 1/10 | train_loss 0.2744 acc 0.888 | val_loss nan acc 0.911 macroF1 0.8801 *
+2026-10-16 15:21:34,002 INFO training.trainer: fold 0 epoch 2/10 | train_loss 0.1163 acc 0.958 | val_loss 0.1173 acc 0.964 macroF1 0.9416 *
+2026-10-16 15:26:45,470 INFO training.trainer: fold 0 epoch 3/10 | train_loss 0.0842 acc 0.969 | val_loss 0.1173 acc 0.965 macroF1 0.9540 *
+2026-10-16 15:30:43,875 INFO training.trainer: fold 0 epoch 4/10 | train_loss 0.0433 acc 0.983 | val_loss 0.0943 acc 0.971 macroF1 0.9521
+2026-10-16 17:04:34,972 INFO training.trainer: fold 0 epoch 5/10 | train_loss 0.0254 acc 0.991 | val_loss 0.1049 acc 0.981 macroF1 0.9717 *
+2026-10-16 22:49:14,987 INFO __main__: CV hybrid (E4) on cuda, folds [0, 1, 2]
+2026-10-16 22:49:15,022 INFO datasets.dataset: Allocating 24.74 GB of pinned RAM tensors (3 bank(s) for 14709 images)...
+2026-10-16 22:49:25,943 INFO datasets.dataset: Pre-loading and populating 14709 images into pinned RAM tensor banks...
+2026-10-16 22:52:51,707 INFO datasets.dataset: Successfully populated 24.74 GB pinned RAM cache! Ultra-fast zero-latency active.
+2026-10-16 22:52:51,712 INFO datasets.dataset: Allocating 2.06 GB of pinned RAM tensors (1 bank(s) for 3677 images)...
+2026-10-16 22:52:53,178 INFO datasets.dataset: Pre-loading and populating 3677 images into pinned RAM tensor banks...
+2026-10-16 22:53:40,889 INFO datasets.dataset: Successfully populated 2.06 GB pinned RAM cache! Ultra-fast zero-latency active.
+2026-10-16 22:53:41,476 INFO timm.models._builder: Loading pretrained weights from Hugging Face hub (timm/efficientnet_b3.ra2_in1k)
+2026-10-16 22:53:41,803 INFO httpx2: HTTP Request: HEAD https://huggingface.co/timm/efficientnet_b3.ra2_in1k/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+2026-10-16 22:53:41,807 INFO timm.models._hub: [timm/efficientnet_b3.ra2_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2026-10-16 22:53:42,173 INFO models.hybrid_model: Built hybrid (E4): 13,074,752 params, backbone pretrained=True
+2026-10-16 22:53:44,329 INFO training.trainer: Resumed fold 0 from epoch 5 (best val_macro_f1=0.9717 @ epoch 5)
+2026-10-16 22:59:01,281 INFO training.trainer: fold 0 epoch 6/10 | train_loss 0.0256 acc 0.990 | val_loss 0.1648 acc 0.980 macroF1 0.9690
+2026-10-17 00:22:31,460 INFO __main__: CV hybrid (E4) on cuda, folds [0, 1, 2]
+2026-10-17 00:22:31,485 INFO datasets.dataset: Allocating 24.74 GB of pinned RAM tensors (3 bank(s) for 14709 images)...
+2026-10-17 00:22:42,517 INFO datasets.dataset: Pre-loading and populating 14709 images into pinned RAM tensor banks...
+2026-10-17 00:26:07,987 INFO datasets.dataset: Successfully populated 24.74 GB pinned RAM cache! Ultra-fast zero-latency active.
+2026-10-17 00:26:07,990 INFO datasets.dataset: Allocating 2.06 GB of pinned RAM tensors (1 bank(s) for 3677 images)...
+2026-10-17 00:26:09,581 INFO datasets.dataset: Pre-loading and populating 3677 images into pinned RAM tensor banks...
+2026-10-17 00:26:56,629 INFO datasets.dataset: Successfully populated 2.06 GB pinned RAM cache! Ultra-fast zero-latency active.
+2026-10-17 00:26:56,866 INFO timm.models._builder: Loading pretrained weights from Hugging Face hub (timm/efficientnet_b3.ra2_in1k)
+2026-10-17 00:26:57,210 INFO httpx2: HTTP Request: HEAD https://huggingface.co/timm/efficientnet_b3.ra2_in1k/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+2026-10-17 00:26:57,213 INFO timm.models._hub: [timm/efficientnet_b3.ra2_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2026-10-17 00:26:57,620 INFO models.hybrid_model: Built hybrid (E4): 13,074,752 params, backbone pretrained=True
+2026-10-17 00:26:59,695 INFO training.trainer: Resumed fold 0 from epoch 6 (best val_macro_f1=0.9717 @ epoch 5)
+2026-10-17 00:31:14,846 INFO training.trainer: fold 0 epoch 7/10 | train_loss 0.0140 acc 0.994 | val_loss 0.0863 acc 0.982 macroF1 0.9733 *
+2026-10-17 00:35:11,491 INFO training.trainer: fold 0 epoch 8/10 | train_loss 0.0071 acc 0.996 | val_loss 0.1014 acc 0.983 macroF1 0.9746 *
+2026-10-17 00:39:08,670 INFO training.trainer: fold 0 epoch 9/10 | train_loss 0.0044 acc 0.999 | val_loss 0.1142 acc 0.982 macroF1 0.9732
+2026-10-17 00:43:04,648 INFO training.trainer: fold 0 epoch 10/10 | train_loss 0.0027 acc 0.999 | val_loss 0.3536 acc 0.981 macroF1 0.9711
+2026-10-17 00:43:08,397 INFO models.hybrid_model: Built hybrid (E4): 13,074,752 params, backbone pretrained=False
+2026-10-17 00:43:25,542 INFO datasets.dataset: Allocating 24.74 GB of pinned RAM tensors (3 bank(s) for 14709 images)...
+2026-10-17 00:43:25,543 INFO datasets.dataset: Pre-loading and populating 14709 images into pinned RAM tensor banks...
+2026-10-17 00:44:04,017 INFO datasets.dataset: Successfully populated 24.74 GB pinned RAM cache! Ultra-fast zero-latency active.
+2026-10-17 00:44:04,020 INFO datasets.dataset: Allocating 2.06 GB of pinned RAM tensors (1 bank(s) for 3677 images)...
+2026-10-17 00:44:04,020 INFO datasets.dataset: Pre-loading and populating 3677 images into pinned RAM tensor banks...
+2026-10-17 00:44:06,229 INFO datasets.dataset: Successfully populated 2.06 GB pinned RAM cache! Ultra-fast zero-latency active.
+2026-10-17 00:44:06,345 INFO timm.models._builder: Loading pretrained weights from Hugging Face hub (timm/efficientnet_b3.ra2_in1k)
+2026-10-17 00:44:06,637 INFO httpx2: HTTP Request: HEAD https://huggingface.co/timm/efficientnet_b3.ra2_in1k/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+2026-10-17 00:44:06,639 INFO timm.models._hub: [timm/efficientnet_b3.ra2_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2026-10-17 00:44:06,888 INFO models.hybrid_model: Built hybrid (E4): 13,074,752 params, backbone pretrained=True
+2026-10-17 00:44:06,958 INFO training.trainer: No checkpoint at /media/storage2/mdpi/DYDA/checkpoints/hybrid/fold_1/last.pth; starting from scratch.
+2026-10-17 00:48:01,331 INFO training.trainer: fold 1 epoch 1/10 | train_loss 0.2869 acc 0.886 | val_loss 0.1470 acc 0.929 macroF1 0.9093 *
+2026-10-17 00:51:57,473 INFO training.trainer: fold 1 epoch 2/10 | train_loss 0.1147 acc 0.956 | val_loss 0.1970 acc 0.968 macroF1 0.9515 *
+2026-10-17 00:55:53,979 INFO training.trainer: fold 1 epoch 3/10 | train_loss 0.0879 acc 0.970 | val_loss 0.1190 acc 0.941 macroF1 0.9391
+2026-10-17 00:59:49,191 INFO training.trainer: fold 1 epoch 4/10 | train_loss 0.0495 acc 0.980 | val_loss 0.1304 acc 0.956 macroF1 0.9412
+2026-10-17 01:03:44,819 INFO training.trainer: fold 1 epoch 5/10 | train_loss 0.0260 acc 0.989 | val_loss 0.0966 acc 0.977 macroF1 0.9716 *
+2026-10-17 01:07:40,637 INFO training.trainer: fold 1 epoch 6/10 | train_loss 0.0192 acc 0.993 | val_loss 0.0722 acc 0.975 macroF1 0.9651
+2026-10-17 01:11:36,842 INFO training.trainer: fold 1 epoch 7/10 | train_loss 0.0056 acc 0.997 | val_loss 0.1751 acc 0.985 macroF1 0.9797 *
+2026-10-17 01:15:32,956 INFO training.trainer: fold 1 epoch 8/10 | train_loss 0.0044 acc 0.998 | val_loss 0.3056 acc 0.983 macroF1 0.9760
+2026-10-17 01:19:28,364 INFO training.trainer: fold 1 epoch 9/10 | train_loss 0.0020 acc 0.999 | val_loss 0.6229 acc 0.984 macroF1 0.9769
+2026-10-17 01:23:24,737 INFO training.trainer: fold 1 epoch 10/10 | train_loss 0.0015 acc 0.999 | val_loss 0.2053 acc 0.983 macroF1 0.9750
+2026-10-17 01:23:24,737 INFO training.trainer: Early stopping at epoch 10 (no improvement for 3 epochs)
+2026-10-17 01:23:28,938 INFO models.hybrid_model: Built hybrid (E4): 13,074,752 params, backbone pretrained=False
+2026-10-17 01:23:46,420 INFO datasets.dataset: Allocating 24.74 GB of pinned RAM tensors (3 bank(s) for 14708 images)...
+2026-10-17 01:23:46,421 INFO datasets.dataset: Pre-loading and populating 14708 images into pinned RAM tensor banks...
+2026-10-17 01:24:27,125 INFO datasets.dataset: Successfully populated 24.74 GB pinned RAM cache! Ultra-fast zero-latency active.
+2026-10-17 01:24:27,128 INFO datasets.dataset: Allocating 2.06 GB of pinned RAM tensors (1 bank(s) for 3678 images)...
+2026-10-17 01:24:27,128 INFO datasets.dataset: Pre-loading and populating 3678 images into pinned RAM tensor banks...
+2026-10-17 01:24:29,438 INFO datasets.dataset: Successfully populated 2.06 GB pinned RAM cache! Ultra-fast zero-latency active.
+2026-10-17 01:24:29,575 INFO timm.models._builder: Loading pretrained weights from Hugging Face hub (timm/efficientnet_b3.ra2_in1k)
+2026-10-17 01:24:29,878 INFO httpx2: HTTP Request: HEAD https://huggingface.co/timm/efficientnet_b3.ra2_in1k/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+2026-10-17 01:24:29,880 WARNING huggingface_hub.utils._http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-10-17 01:24:29,881 INFO timm.models._hub: [timm/efficientnet_b3.ra2_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2026-10-17 01:24:30,254 INFO models.hybrid_model: Built hybrid (E4): 13,074,752 params, backbone pretrained=True
+2026-10-17 01:24:30,327 INFO training.trainer: No checkpoint at /media/storage2/mdpi/DYDA/checkpoints/hybrid/fold_2/last.pth; starting from scratch.
+2026-10-17 01:28:27,415 INFO training.trainer: fold 2 epoch 1/10 | train_loss 0.2761 acc 0.887 | val_loss 0.1738 acc 0.922 macroF1 0.8975 *
+2026-10-17 01:32:21,910 INFO training.trainer: fold 2 epoch 2/10 | train_loss 0.1133 acc 0.957 | val_loss 0.1412 acc 0.955 macroF1 0.9267 *
+2026-10-17 01:36:17,811 INFO training.trainer: fold 2 epoch 3/10 | train_loss 0.0738 acc 0.973 | val_loss 0.1011 acc 0.970 macroF1 0.9571 *
+2026-10-17 01:40:13,610 INFO training.trainer: fold 2 epoch 4/10 | train_loss 0.0475 acc 0.985 | val_loss 0.0739 acc 0.971 macroF1 0.9501
+2026-10-17 01:44:09,264 INFO training.trainer: fold 2 epoch 5/10 | train_loss 0.0237 acc 0.991 | val_loss 0.1214 acc 0.957 macroF1 0.9231
+2026-10-17 01:48:05,632 INFO training.trainer: fold 2 epoch 6/10 | train_loss 0.0176 acc 0.994 | val_loss 0.1005 acc 0.981 macroF1 0.9727 *
+2026-10-17 01:52:01,059 INFO training.trainer: fold 2 epoch 7/10 | train_loss 0.0076 acc 0.997 | val_loss 0.0956 acc 0.985 macroF1 0.9777 *
+2026-10-17 01:55:56,737 INFO training.trainer: fold 2 epoch 8/10 | train_loss 0.0049 acc 0.998 | val_loss 0.0858 acc 0.984 macroF1 0.9750
+2026-10-17 01:59:52,635 INFO training.trainer: fold 2 epoch 9/10 | train_loss 0.0017 acc 0.999 | val_loss 0.1182 acc 0.988 macroF1 0.9810 *
+2026-10-17 02:03:48,297 INFO training.trainer: fold 2 epoch 10/10 | train_loss 0.0012 acc 0.999 | val_loss 0.1026 acc 0.986 macroF1 0.9788
+2026-10-17 02:03:52,424 INFO models.hybrid_model: Built hybrid (E4): 13,074,752 params, backbone pretrained=False
+2026-10-17 02:04:10,164 INFO __main__: CV hybrid macro-F1 (validation) = 0.9784 +- 0.0034 over 3 fold(s)

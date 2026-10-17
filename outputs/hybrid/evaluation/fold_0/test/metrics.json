@@ -1,0 +1,436 @@
+{
+  "n_samples": 3065,
+  "accuracy": 0.9827079934747145,
+  "balanced_accuracy": 0.9776196814721404,
+  "macro_precision": 0.9809819529799654,
+  "macro_recall": 0.9776196814721404,
+  "macro_f1": 0.9792859645048312,
+  "per_class": {
+    "COVID-19": {
+      "precision": 0.9896907216494846,
+      "recall": 0.9836065573770492,
+      "f1": 0.986639260020555,
+      "support": 488,
+      "sensitivity": 0.9836065573770492,
+      "specificity": 0.9980597594101669
+    },
+    "Pneumonia": {
+      "precision": 0.9770408163265306,
+      "recall": 0.982051282051282,
+      "f1": 0.979539641943734,
+      "support": 780,
+      "sensitivity": 0.982051282051282,
+      "specificity": 0.9921225382932166
+    },
+    "Tuberculosis": {
+      "precision": 0.972972972972973,
+      "recall": 0.96,
+      "f1": 0.9664429530201343,
+      "support": 150,
+      "sensitivity": 0.96,
+      "specificity": 0.9986277873070326
+    },
+    "Normal": {
+      "precision": 0.9842233009708737,
+      "recall": 0.9848208864602307,
+      "f1": 0.9845220030349013,
+      "support": 1647,
+      "sensitivity": 0.9848208864602307,
+      "specificity": 0.9816643159379408
+    }
+  },
+  "confusion_matrix": [
+    [
+      480,
+      0,
+      0,
+      8
+    ],
+    [
+      2,
+      766,
+      0,
+      12
+    ],
+    [
+      0,
+      0,
+      144,
+      6
+    ],
+    [
+      3,
+      18,
+      4,
+      1622
+    ]
+  ],
+  "class_names": [
+    "COVID-19",
+    "Pneumonia",
+    "Tuberculosis",
+    "Normal"
+  ],
+  "classes_absent_in_truth": [],
+  "roc_auc_ovr": {
+    "per_class": {
+      "COVID-19": 0.9998608434003194,
+      "Pneumonia": 0.9989608932278516,
+      "Tuberculosis": 0.9995220125786164,
+      "Normal": 0.9982427339360447
+    },
+    "macro": 0.999146620785708,
+    "n_classes_used": 4,
+    "skipped": {}
+  },
+  "split": "test",
+  "checkpoint": "/media/storage2/mdpi/DYDA/checkpoints/hybrid/fold_0/best.pth",
+  "variant": "hybrid",
+  "checkpoint_fold": 0,
+  "checkpoint_val_metric": {
+    "name": "val_macro_f1",
+    "value": 0.9745601796398632,
+    "split": "validation"
+  },
+  "per_source": {
+    "archive4_tb": {
+      "n_samples": 111,
+      "accuracy": 0.9099099099099099,
+      "balanced_accuracy": 0.907843137254902,
+      "macro_f1": 0.4545081967213115,
+      "per_class": {
+        "COVID-19": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0,
+          "sensitivity": null,
+          "specificity": 1.0
+        },
+        "Pneumonia": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0,
+          "sensitivity": null,
+          "specificity": 1.0
+        },
+        "Tuberculosis": {
+          "precision": 0.9183673469387755,
+          "recall": 0.8823529411764706,
+          "f1": 0.9,
+          "support": 51,
+          "sensitivity": 0.8823529411764706,
+          "specificity": 0.9333333333333333
+        },
+        "Normal": {
+          "precision": 0.9032258064516129,
+          "recall": 0.9333333333333333,
+          "f1": 0.9180327868852459,
+          "support": 60,
+          "sensitivity": 0.9333333333333333,
+          "specificity": 0.8823529411764706
+        }
+      },
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          45,
+          6
+        ],
+        [
+          0,
+          0,
+          4,
+          56
+        ]
+      ],
+      "classes_absent_in_truth": [
+        "COVID-19",
+        "Pneumonia"
+      ],
+      "roc_auc_ovr": {
+        "per_class": {
+          "COVID-19": null,
+          "Pneumonia": null,
+          "Tuberculosis": 0.9624183006535949,
+          "Normal": 0.9640522875816994
+        },
+        "macro": 0.9632352941176472,
+        "n_classes_used": 2,
+        "skipped": {
+          "COVID-19": "no positive samples",
+          "Pneumonia": "no positive samples"
+        }
+      }
+    },
+    "covid_radiography": {
+      "n_samples": 2062,
+      "accuracy": 0.9893307468477207,
+      "balanced_accuracy": 0.9821892817884906,
+      "macro_f1": 0.737837432256339,
+      "per_class": {
+        "COVID-19": {
+          "precision": 0.9917355371900827,
+          "recall": 0.9836065573770492,
+          "f1": 0.9876543209876543,
+          "support": 488,
+          "sensitivity": 0.9836065573770492,
+          "specificity": 0.9974587039390089
+        },
+        "Pneumonia": {
+          "precision": 0.9738219895287958,
+          "recall": 0.96875,
+          "f1": 0.9712793733681462,
+          "support": 192,
+          "sensitivity": 0.96875,
+          "specificity": 0.9973262032085561
+        },
+        "Tuberculosis": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0,
+          "sensitivity": null,
+          "specificity": 1.0
+        },
+        "Normal": {
+          "precision": 0.9906272530641672,
+          "recall": 0.9942112879884226,
+          "f1": 0.9924160346695557,
+          "support": 1382,
+          "sensitivity": 0.9942112879884226,
+          "specificity": 0.9808823529411764
+        }
+      },
+      "confusion_matrix": [
+        [
+          480,
+          0,
+          0,
+          8
+        ],
+        [
+          1,
+          186,
+          0,
+          5
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          3,
+          5,
+          0,
+          1374
+        ]
+      ],
+      "classes_absent_in_truth": [
+        "Tuberculosis"
+      ],
+      "roc_auc_ovr": {
+        "per_class": {
+          "COVID-19": 0.9997982065115504,
+          "Pneumonia": 0.9993649732620321,
+          "Tuberculosis": null,
+          "Normal": 0.9992412956499532
+        },
+        "macro": 0.999468158474512,
+        "n_classes_used": 3,
+        "skipped": {
+          "Tuberculosis": "no positive samples"
+        }
+      }
+    },
+    "kaggle_pneumonia": {
+      "n_samples": 793,
+      "accuracy": 0.9735182849936949,
+      "balanced_accuracy": 0.9614899618383939,
+      "macro_f1": 0.4831783771095145,
+      "per_class": {
+        "COVID-19": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0,
+          "sensitivity": null,
+          "specificity": 0.9987389659520807
+        },
+        "Pneumonia": {
+          "precision": 0.9780775716694773,
+          "recall": 0.9863945578231292,
+          "f1": 0.9822184589331076,
+          "support": 588,
+          "sensitivity": 0.9863945578231292,
+          "specificity": 0.9365853658536586
+        },
+        "Tuberculosis": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0,
+          "sensitivity": null,
+          "specificity": 1.0
+        },
+        "Normal": {
+          "precision": 0.964824120603015,
+          "recall": 0.9365853658536586,
+          "f1": 0.9504950495049505,
+          "support": 205,
+          "sensitivity": 0.9365853658536586,
+          "specificity": 0.9880952380952381
+        }
+      },
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          580,
+          0,
+          7
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          13,
+          0,
+          192
+        ]
+      ],
+      "classes_absent_in_truth": [
+        "COVID-19",
+        "Tuberculosis"
+      ],
+      "roc_auc_ovr": {
+        "per_class": {
+          "COVID-19": null,
+          "Pneumonia": 0.993827775012444,
+          "Tuberculosis": null,
+          "Normal": 0.9939771030363365
+        },
+        "macro": 0.9939024390243902,
+        "n_classes_used": 2,
+        "skipped": {
+          "COVID-19": "no positive samples",
+          "Tuberculosis": "no positive samples"
+        }
+      }
+    },
+    "tb_radiography_database": {
+      "n_samples": 99,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 0.25,
+      "per_class": {
+        "COVID-19": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0,
+          "sensitivity": null,
+          "specificity": 1.0
+        },
+        "Pneumonia": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0,
+          "sensitivity": null,
+          "specificity": 1.0
+        },
+        "Tuberculosis": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 99,
+          "sensitivity": 1.0,
+          "specificity": null
+        },
+        "Normal": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0,
+          "sensitivity": null,
+          "specificity": 1.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          99,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "classes_absent_in_truth": [
+        "COVID-19",
+        "Pneumonia",
+        "Normal"
+      ],
+      "roc_auc_ovr": {
+        "per_class": {
+          "COVID-19": null,
+          "Pneumonia": null,
+          "Tuberculosis": null,
+          "Normal": null
+        },
+        "macro": null,
+        "n_classes_used": 0,
+        "skipped": {
+          "COVID-19": "no positive samples",
+          "Pneumonia": "no positive samples",
+          "Tuberculosis": "no negative samples",
+          "Normal": "no positive samples"
+        }
+      }
+    }
+  },
+  "synthetic_data": false,
+  "disclaimer": "RESEARCH/EDUCATION PROTOTYPE ONLY. This model is NOT a validated diagnostic system and must not be used for clinical decisions. Predictions and Grad-CAM maps have not been clinically validated."
+}

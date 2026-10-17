@@ -1,0 +1,44 @@
+# Data (never commit raw or processed datasets)
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Checkpoints
+checkpoints/**/last.pth
+checkpoints/*_prev_run/
+checkpoints/*_backup/
+checkpoints/dyda/fold_*
+checkpoints/hybrid/fold_*
+
+# Outputs
+outputs/*_prev_run/
+outputs/*_backup/
+outputs/**/history.csv
+outputs/**/val_predictions.csv
+
+# Temporary logs & notes
+*.tmp
+training_output*.log
+ablation_run.log
+training_dyda.log
+training_status.txt
+training_plan.txt
+quick_train_estimate.txt
+next_step.txt
+Claude.md
+Next prompts.md
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+
+# IDE / OS
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store

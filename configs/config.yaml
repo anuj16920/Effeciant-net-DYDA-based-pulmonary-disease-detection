@@ -1,0 +1,154 @@
+# DyDA project configuration.
+# All relative paths are resolved against the project root (the parent of configs/).
+# Research/education prototype -- NOT a validated diagnostic system.
+
+experiment:
+  name: hybrid                 # output sub-folder name; defaults to the model id
+  model: hybrid                # backbone (E1) | cbam (E2) | dyda (E3) | hybrid (E4)
+
+paths:
+  raw_dir: data/raw
+  processed_dir: data/processed
+  manifest_dir: data/manifests
+  manifest: data/manifests/manifest.csv
+  splits: data/manifests/splits.json
+  data_report: data/manifests/data_report.json
+  outputs_dir: outputs
+  checkpoints_dir: checkpoints
+
+# Class order defines the logit index. Do not reorder after training.
+classes: [COVID-19, Pneumonia, Tuberculosis, Normal]
+
+# Explicit label mapping per source. A raw label mapped to null is excluded and reported.
+# Raw labels that are not listed at all are also excluded and reported as "unmapped".
+#   label_from: folder   -> raw label = nearest ancestor folder name found in label_map (case-insensitive)
+#   label_from: filename -> raw label = regex group 1 of filename_label_regex
+# patient_id_regex: regex group 1 is the patient id (null = no reliable patient id;
+# falls back to duplicate-cluster grouping).
+sources:
+  covid_radiography:
+    enabled: true
+    root: ../COVID-19_Radiography_Dataset
+    label_from: folder
+    label_map:
+      COVID: COVID-19
+      Normal: Normal
+      Viral Pneumonia: Pneumonia
+      Lung_Opacity: null       # ambiguous; never silently mapped to Pneumonia
+    filename_label_regex: null
+    patient_id_regex: null
+  kaggle_pneumonia:
+    enabled: true
+    # Original Kaggle train/val/test folders are merged and re-split with grouping.
+    root: ../chest_xray/chest_xray
+    label_from: folder
+    label_map:
+      NORMAL: Normal
+      PNEUMONIA: Pneumonia
+    filename_label_regex: null
+    patient_id_regex: '^(person\d+)_'
+    # Pneumonia subtype parsed from filename (person1_bacteria_1 / person1_virus_6).
+    pneumonia_subtypes:
+      bacteria: true
+      virus: true
+  archive4_tb:
+    enabled: true
+    root: ../archive (4)/Lung Segmentation/CXR_png
+    label_from: filename
+    label_map:
+      '0': Normal
+      '1': Tuberculosis
+    filename_label_regex: '^(?:CHN|MCU)CXR_\d{4}_(\d)'
+    patient_id_regex: '^((?:CHN|MCU)CXR_\d{4})_'
+  tb_radiography_database:
+    enabled: true
+    root: ../TB_Chest_Radiography_Database
+    label_from: folder
+    label_map:
+      Tuberculosis: Tuberculosis
+      Normal: null
+    filename_label_regex: null
+    patient_id_regex: null
+
+
+manifest:
+  image_extensions: [.png, .jpg, .jpeg, .bmp, .tif, .tiff]
+  exclude_dirs: [masks, ManualMask, leftMask, rightMask, __MACOSX]
+  phash_hamming_threshold: 4   # 64-bit pHash; <= threshold => near-duplicate (same group)
+  drop_label_conflicts: true   # drop duplicate groups whose members carry different labels
+  min_image_side: 64           # smaller images are rejected as unusable
+  hash_workers: 8              # threads for image validation + hashing
+
+preprocessing:
+  img_size: 224
+  clahe:
+    enabled: true
+    clip_limit: 2.0
+    tile_grid: [8, 8]
+  # ImageNet statistics (backbone is ImageNet-pretrained); no dataset statistics -> no leakage.
+  mean: [0.485, 0.456, 0.406]
+  std: [0.229, 0.224, 0.225]
+  # Cache deterministic CLAHE+resize output (uint8 PNG) under paths.processed_dir.
+  # Augmentation is applied after the cache, so this does not change results.
+  cache: true
+
+augmentation:                  # applied to TRAINING samples only
+  enabled: true
+  p: 0.8                       # probability of applying the geometric+photometric block
+  rotation_deg: 10.0
+  scale: [0.9, 1.1]
+  translate: 0.05              # fraction of image size
+  brightness: 0.1
+  contrast: 0.1
+  horizontal_flip: false       # off: laterality (heart side) is anatomically meaningful
+
+model:
+  backbone: efficientnet_b3
+  pretrained: true             # falls back to random init with a clear warning if weights fail to load
+  feature_stage: final         # final (1536x7x7 @224) | stride16 (136x14x14 @224)
+  freeze_backbone: false
+  dropout: 0.3
+  dyda:
+    reduction: 16
+    spatial_kernel: 7
+    gate_hidden: 64
+  cbam:
+    reduction: 16
+    spatial_kernel: 7
+  swin:
+    embed_dim: 256
+    depth: 2                   # blocks alternate W-MSA (shift 0) and SW-MSA (shift_size)
+    num_heads: 8
+    window_size: 7
+    shift_size: 3
+    upsample_size: 14          # token grid; 14 with window 7 => 2x2 windows (null = no upsampling)
+    mlp_ratio: 4.0
+    drop_path: 0.1
+    attn_drop: 0.0
+    proj_drop: 0.0
+
+training:
+  seed: 42
+  deterministic: false         # disable for speed
+  test_fraction: 0.15          # grouped+stratified held-out test, carved out before CV
+  folds: 5
+  batch_size: 104              # increased to 104 for max VRAM utilization (~9.3GB on GTX 1080 Ti)
+  epochs: 10                   # reduced from 30 to 10 for fast training
+  lr: 0.0006                   # doubled learning rate for faster convergence
+  min_lr: 0.000001
+  weight_decay: 0.0001
+  num_workers: 4               # 4 workers prevents Linux shared memory OOM with in-memory cache
+  amp: true                    # only used when CUDA is available
+  grad_clip: 1.0               # null disables clipping
+  class_weights: true          # inverse frequency computed on the training fold only
+  early_stopping:
+    patience: 3                # reduced from 7 to 3 for faster stopping
+    min_delta: 0.001
+  device: auto                 # auto | cpu | cuda
+
+evaluation:
+  batch_size: 64
+  gradcam:
+    target_layer: auto         # auto = last conv feature map of the EfficientNet-B3 stage in use
+    max_examples: 16           # per correct / incorrect folder
+    alpha: 0.4                 # overlay opacity

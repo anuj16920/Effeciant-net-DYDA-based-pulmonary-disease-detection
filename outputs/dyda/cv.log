@@ -1,0 +1,47 @@
+2026-10-15 16:02:06,764 INFO __main__: CV dyda (E3) on cuda, folds [0, 1, 2]
+2026-10-15 16:02:07,011 INFO timm.models._builder: Loading pretrained weights from Hugging Face hub (timm/efficientnet_b3.ra2_in1k)
+2026-10-15 16:02:07,430 INFO httpx2: HTTP Request: HEAD https://huggingface.co/timm/efficientnet_b3.ra2_in1k/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+2026-10-15 16:02:07,430 WARNING huggingface_hub.utils._http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-10-15 16:02:07,431 INFO timm.models._hub: [timm/efficientnet_b3.ra2_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2026-10-15 16:02:07,464 INFO models.hybrid_model: Built dyda (E3): 11,097,520 params, backbone pretrained=True
+2026-10-15 16:06:05,098 INFO training.trainer: fold 0 epoch 1/10 | train_loss 0.2218 acc 0.926 | val_loss 0.1534 acc 0.947 macroF1 0.9023 *
+2026-10-15 16:09:59,854 INFO training.trainer: fold 0 epoch 2/10 | train_loss 0.0838 acc 0.969 | val_loss 0.0723 acc 0.974 macroF1 0.9304 *
+2026-10-15 16:13:55,608 INFO training.trainer: fold 0 epoch 3/10 | train_loss 0.0504 acc 0.982 | val_loss 0.1162 acc 0.960 macroF1 0.9051
+2026-10-15 16:17:51,053 INFO training.trainer: fold 0 epoch 4/10 | train_loss 0.0335 acc 0.988 | val_loss 0.0720 acc 0.976 macroF1 0.9445 *
+2026-10-15 16:21:47,622 INFO training.trainer: fold 0 epoch 5/10 | train_loss 0.0235 acc 0.993 | val_loss 0.0741 acc 0.978 macroF1 0.9470 *
+2026-10-15 16:25:43,089 INFO training.trainer: fold 0 epoch 6/10 | train_loss 0.0144 acc 0.995 | val_loss 0.0796 acc 0.975 macroF1 0.9405
+2026-10-15 16:29:38,483 INFO training.trainer: fold 0 epoch 7/10 | train_loss 0.0075 acc 0.998 | val_loss 0.0752 acc 0.980 macroF1 0.9477
+2026-10-15 16:33:34,518 INFO training.trainer: fold 0 epoch 8/10 | train_loss 0.0035 acc 0.999 | val_loss 0.0760 acc 0.982 macroF1 0.9523 *
+2026-10-15 16:37:30,635 INFO training.trainer: fold 0 epoch 9/10 | train_loss 0.0023 acc 0.999 | val_loss 0.0816 acc 0.980 macroF1 0.9493
+2026-10-15 16:41:25,847 INFO training.trainer: fold 0 epoch 10/10 | train_loss 0.0020 acc 1.000 | val_loss 0.0757 acc 0.981 macroF1 0.9523
+2026-10-15 16:41:27,160 INFO models.hybrid_model: Built dyda (E3): 11,097,520 params, backbone pretrained=False
+2026-10-15 16:41:43,668 INFO timm.models._builder: Loading pretrained weights from Hugging Face hub (timm/efficientnet_b3.ra2_in1k)
+2026-10-15 16:41:43,994 INFO httpx2: HTTP Request: HEAD https://huggingface.co/timm/efficientnet_b3.ra2_in1k/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+2026-10-15 16:41:43,995 INFO timm.models._hub: [timm/efficientnet_b3.ra2_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2026-10-15 16:41:44,030 INFO models.hybrid_model: Built dyda (E3): 11,097,520 params, backbone pretrained=True
+2026-10-15 16:45:39,723 INFO training.trainer: fold 1 epoch 1/10 | train_loss 0.2270 acc 0.923 | val_loss 0.1028 acc 0.964 macroF1 0.9256 *
+2026-10-15 16:49:34,308 INFO training.trainer: fold 1 epoch 2/10 | train_loss 0.0936 acc 0.968 | val_loss 0.1139 acc 0.967 macroF1 0.8775
+2026-10-15 16:53:29,661 INFO training.trainer: fold 1 epoch 3/10 | train_loss 0.0561 acc 0.980 | val_loss 0.0664 acc 0.980 macroF1 0.9539 *
+2026-10-15 16:57:25,406 INFO training.trainer: fold 1 epoch 4/10 | train_loss 0.0354 acc 0.987 | val_loss 0.0607 acc 0.978 macroF1 0.9396
+2026-10-15 17:01:21,245 INFO training.trainer: fold 1 epoch 5/10 | train_loss 0.0246 acc 0.991 | val_loss 0.0679 acc 0.979 macroF1 0.9561 *
+2026-10-15 17:05:17,704 INFO training.trainer: fold 1 epoch 6/10 | train_loss 0.0137 acc 0.995 | val_loss 0.0634 acc 0.983 macroF1 0.9565
+2026-10-15 17:09:12,388 INFO training.trainer: fold 1 epoch 7/10 | train_loss 0.0082 acc 0.997 | val_loss 0.0727 acc 0.984 macroF1 0.9569
+2026-10-15 17:13:08,420 INFO training.trainer: fold 1 epoch 8/10 | train_loss 0.0042 acc 0.998 | val_loss 0.0776 acc 0.984 macroF1 0.9515
+2026-10-15 17:13:08,420 INFO training.trainer: Early stopping at epoch 8 (no improvement for 3 epochs)
+2026-10-15 17:13:09,775 INFO models.hybrid_model: Built dyda (E3): 11,097,520 params, backbone pretrained=False
+2026-10-15 17:13:26,511 INFO timm.models._builder: Loading pretrained weights from Hugging Face hub (timm/efficientnet_b3.ra2_in1k)
+2026-10-15 17:13:26,799 INFO httpx2: HTTP Request: HEAD https://huggingface.co/timm/efficientnet_b3.ra2_in1k/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+2026-10-15 17:13:26,800 INFO timm.models._hub: [timm/efficientnet_b3.ra2_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2026-10-15 17:13:26,836 INFO models.hybrid_model: Built dyda (E3): 11,097,520 params, backbone pretrained=True
+2026-10-15 17:17:22,196 INFO training.trainer: fold 2 epoch 1/10 | train_loss 0.2296 acc 0.925 | val_loss 0.1258 acc 0.959 macroF1 0.8875 *
+2026-10-15 17:21:16,789 INFO training.trainer: fold 2 epoch 2/10 | train_loss 0.0867 acc 0.970 | val_loss 0.0717 acc 0.974 macroF1 0.8949 *
+2026-10-15 17:25:13,141 INFO training.trainer: fold 2 epoch 3/10 | train_loss 0.0531 acc 0.981 | val_loss 0.0905 acc 0.972 macroF1 0.9181 *
+2026-10-15 17:29:10,133 INFO training.trainer: fold 2 epoch 4/10 | train_loss 0.0366 acc 0.987 | val_loss 0.1064 acc 0.971 macroF1 0.9343 *
+2026-10-15 17:33:07,274 INFO training.trainer: fold 2 epoch 5/10 | train_loss 0.0231 acc 0.992 | val_loss 0.0695 acc 0.979 macroF1 0.9421 *
+2026-10-15 17:37:02,567 INFO training.trainer: fold 2 epoch 6/10 | train_loss 0.0114 acc 0.996 | val_loss 0.0753 acc 0.982 macroF1 0.9601 *
+2026-10-15 17:40:58,618 INFO training.trainer: fold 2 epoch 7/10 | train_loss 0.0078 acc 0.997 | val_loss 0.0642 acc 0.984 macroF1 0.9579
+2026-10-15 17:44:55,231 INFO training.trainer: fold 2 epoch 8/10 | train_loss 0.0042 acc 0.999 | val_loss 0.0757 acc 0.984 macroF1 0.9573
+2026-10-15 17:48:50,847 INFO training.trainer: fold 2 epoch 9/10 | train_loss 0.0029 acc 0.999 | val_loss 0.0768 acc 0.985 macroF1 0.9646 *
+2026-10-15 17:52:46,469 INFO training.trainer: fold 2 epoch 10/10 | train_loss 0.0028 acc 0.999 | val_loss 0.0737 acc 0.985 macroF1 0.9686 *
+2026-10-15 17:52:47,875 INFO models.hybrid_model: Built dyda (E3): 11,097,520 params, backbone pretrained=False
+2026-10-15 17:53:04,265 INFO __main__: CV dyda macro-F1 (validation) = 0.9590 +- 0.0085 over 3 fold(s)

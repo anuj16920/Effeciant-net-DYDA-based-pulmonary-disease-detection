@@ -1,0 +1,90 @@
+{
+  "n_samples": 3561,
+  "accuracy": 0.9853973602920528,
+  "balanced_accuracy": 0.9783389986309797,
+  "macro_precision": 0.9596344008467623,
+  "macro_recall": 0.9783389986309797,
+  "macro_f1": 0.9686276966096472,
+  "per_class": {
+    "COVID-19": {
+      "precision": 0.9864406779661017,
+      "recall": 0.9931740614334471,
+      "f1": 0.9897959183673469,
+      "support": 586,
+      "sensitivity": 0.9931740614334471,
+      "specificity": 0.9973109243697479
+    },
+    "Pneumonia": {
+      "precision": 0.9839743589743589,
+      "recall": 0.9850267379679144,
+      "f1": 0.9845002672367718,
+      "support": 935,
+      "sensitivity": 0.9850267379679144,
+      "specificity": 0.9942878903274943
+    },
+    "Tuberculosis": {
+      "precision": 0.8787878787878788,
+      "recall": 0.9508196721311475,
+      "f1": 0.9133858267716536,
+      "support": 61,
+      "sensitivity": 0.9508196721311475,
+      "specificity": 0.9977142857142857
+    },
+    "Normal": {
+      "precision": 0.98933468765871,
+      "recall": 0.9843355229914098,
+      "f1": 0.9868287740628167,
+      "support": 1979,
+      "sensitivity": 0.9843355229914098,
+      "specificity": 0.9867256637168141
+    }
+  },
+  "confusion_matrix": [
+    [
+      582,
+      0,
+      0,
+      4
+    ],
+    [
+      0,
+      921,
+      0,
+      14
+    ],
+    [
+      0,
+      0,
+      58,
+      3
+    ],
+    [
+      8,
+      15,
+      8,
+      1948
+    ]
+  ],
+  "class_names": [
+    "COVID-19",
+    "Pneumonia",
+    "Tuberculosis",
+    "Normal"
+  ],
+  "classes_absent_in_truth": [],
+  "roc_auc_ovr": {
+    "per_class": {
+      "COVID-19": 0.9998978977256432,
+      "Pneumonia": 0.9992282033633227,
+      "Tuberculosis": 0.9969789227166276,
+      "Normal": 0.9981731377951423
+    },
+    "macro": 0.998569540400184,
+    "n_classes_used": 4,
+    "skipped": {}
+  },
+  "fold": 2,
+  "split": "validation",
+  "n_train": 14246,
+  "n_val": 3561
+}

@@ -1,0 +1,227 @@
+{
+  "experiment": "hybrid",
+  "model": "hybrid",
+  "ablation_id": "E4",
+  "device": "cuda",
+  "folds": [
+    0,
+    1,
+    2
+  ],
+  "per_fold": [
+    {
+      "fold": 0,
+      "best_epoch": 8,
+      "epochs_run": 10,
+      "accuracy": 0.9834103889039978,
+      "balanced_accuracy": 0.9742233408037211,
+      "macro_precision": 0.9749285109181826,
+      "macro_recall": 0.9742233408037211,
+      "macro_f1": 0.9745601796398632,
+      "macro_roc_auc": 0.9991156233376619,
+      "f1_COVID-19": 0.9906063193851409,
+      "sens_COVID-19": 0.9914529914529915,
+      "spec_COVID-19": 0.9980595084087969,
+      "f1_Pneumonia": 0.9840425531914894,
+      "sens_Pneumonia": 0.9893048128342246,
+      "spec_Pneumonia": 0.9927060539752006,
+      "f1_Tuberculosis": 0.9385474860335196,
+      "sens_Tuberculosis": 0.9333333333333333,
+      "spec_Tuberculosis": 0.9971404060623391,
+      "f1_Normal": 0.985044359949303,
+      "sens_Normal": 0.9828022255943348,
+      "spec_Normal": 0.9852941176470589
+    },
+    {
+      "fold": 1,
+      "best_epoch": 7,
+      "epochs_run": 10,
+      "accuracy": 0.9847701930921947,
+      "balanced_accuracy": 0.9787513774833736,
+      "macro_precision": 0.9807994918357148,
+      "macro_recall": 0.9787513774833736,
+      "macro_f1": 0.9796786736948894,
+      "macro_roc_auc": 0.99771875753009,
+      "f1_COVID-19": 0.9923273657289002,
+      "sens_COVID-19": 0.9948717948717949,
+      "spec_COVID-19": 0.9980595084087969,
+      "f1_Pneumonia": 0.9831223628691983,
+      "sens_Pneumonia": 0.9957264957264957,
+      "spec_Pneumonia": 0.9897847500912076,
+      "f1_Tuberculosis": 0.9575070821529745,
+      "sens_Tuberculosis": 0.9441340782122905,
+      "spec_Tuberculosis": 0.998570611778159,
+      "f1_Normal": 0.9857578840284842,
+      "sens_Normal": 0.9802731411229135,
+      "spec_Normal": 0.99
+    },
+    {
+      "fold": 2,
+      "best_epoch": 9,
+      "epochs_run": 10,
+      "accuracy": 0.9877650897226754,
+      "balanced_accuracy": 0.9777810009483553,
+      "macro_precision": 0.9844134356674623,
+      "macro_recall": 0.9777810009483553,
+      "macro_f1": 0.9810465295948066,
+      "macro_roc_auc": 0.9989992634039946,
+      "f1_COVID-19": 0.9871685201026519,
+      "sens_COVID-19": 0.984641638225256,
+      "spec_COVID-19": 0.9980595084087969,
+      "f1_Pneumonia": 0.9898666666666667,
+      "sens_Pneumonia": 0.9914529914529915,
+      "spec_Pneumonia": 0.9959883296863603,
+      "f1_Tuberculosis": 0.9575070821529745,
+      "sens_Tuberculosis": 0.9441340782122905,
+      "spec_Tuberculosis": 0.9985710202915119,
+      "f1_Normal": 0.9896438494569336,
+      "sens_Normal": 0.9908952959028832,
+      "spec_Normal": 0.9864785420340976
+    }
+  ],
+  "aggregate": {
+    "accuracy": {
+      "mean": 0.9853152239062893,
+      "std": 0.002227924762257992,
+      "n": 3
+    },
+    "balanced_accuracy": {
+      "mean": 0.9769185730784833,
+      "std": 0.002384033434354176,
+      "n": 3
+    },
+    "macro_precision": {
+      "mean": 0.9800471461404531,
+      "std": 0.004787010278739631,
+      "n": 3
+    },
+    "macro_recall": {
+      "mean": 0.9769185730784833,
+      "std": 0.002384033434354176,
+      "n": 3
+    },
+    "macro_f1": {
+      "mean": 0.9784284609765197,
+      "std": 0.003419131149192532,
+      "n": 3
+    },
+    "macro_roc_auc": {
+      "mean": 0.9986112147572488,
+      "std": 0.0007750773092226364,
+      "n": 3
+    },
+    "f1_COVID-19": {
+      "mean": 0.9900340684055644,
+      "std": 0.002626599595786381,
+      "n": 3
+    },
+    "sens_COVID-19": {
+      "mean": 0.9903221415166809,
+      "std": 0.005207988329194064,
+      "n": 3
+    },
+    "spec_COVID-19": {
+      "mean": 0.9980595084087969,
+      "std": 0.0,
+      "n": 3
+    },
+    "f1_Pneumonia": {
+      "mean": 0.9856771942424514,
+      "std": 0.0036572458151256934,
+      "n": 3
+    },
+    "sens_Pneumonia": {
+      "mean": 0.992161433337904,
+      "std": 0.003268932581202284,
+      "n": 3
+    },
+    "spec_Pneumonia": {
+      "mean": 0.9928263779175895,
+      "std": 0.0031035396463848816,
+      "n": 3
+    },
+    "f1_Tuberculosis": {
+      "mean": 0.9511872167798229,
+      "std": 0.01094632792329391,
+      "n": 3
+    },
+    "sens_Tuberculosis": {
+      "mean": 0.9405338299193048,
+      "std": 0.006235812963314355,
+      "n": 3
+    },
+    "spec_Tuberculosis": {
+      "mean": 0.9980940127106699,
+      "std": 0.0008258476079316556,
+      "n": 3
+    },
+    "f1_Normal": {
+      "mean": 0.9868153644782404,
+      "std": 0.0024753837296292826,
+      "n": 3
+    },
+    "sens_Normal": {
+      "mean": 0.9846568875400439,
+      "std": 0.005548636881437982,
+      "n": 3
+    },
+    "spec_Normal": {
+      "mean": 0.9872575532270522,
+      "std": 0.0024477491719929216,
+      "n": 3
+    }
+  },
+  "best_fold_by_val_macro_f1": 2,
+  "best_model_checkpoint": "/media/storage2/mdpi/DYDA/checkpoints/hybrid/best_model.pth",
+  "note": "Fold metrics are VALIDATION estimates (folds also drive early stopping/checkpoint selection); the held-out test split is evaluated separately by evaluation.evaluate.",
+  "fold_details": [
+    {
+      "fold": 0,
+      "best_epoch": 8,
+      "best_val_macro_f1": 0.9745601796398632,
+      "epochs_run": 10,
+      "finished": true,
+      "early_stopped": false,
+      "train_seconds": 969.2,
+      "class_weights": [
+        1.5694621801376343,
+        0.9824338555335999,
+        5.128661155700684,
+        0.46512141823768616
+      ],
+      "best_checkpoint": "/media/storage2/mdpi/DYDA/checkpoints/hybrid/fold_0/best.pth"
+    },
+    {
+      "fold": 1,
+      "best_epoch": 7,
+      "best_val_macro_f1": 0.9796786736948894,
+      "epochs_run": 10,
+      "finished": true,
+      "early_stopped": false,
+      "train_seconds": 2359.6,
+      "class_weights": [
+        1.5694621801376343,
+        0.9826964139938354,
+        5.121518135070801,
+        0.46512141823768616
+      ],
+      "best_checkpoint": "/media/storage2/mdpi/DYDA/checkpoints/hybrid/fold_1/best.pth"
+    },
+    {
+      "fold": 2,
+      "best_epoch": 9,
+      "best_val_macro_f1": 0.9810465295948066,
+      "epochs_run": 10,
+      "finished": true,
+      "early_stopped": false,
+      "train_seconds": 2360.0,
+      "class_weights": [
+        1.5700255632400513,
+        0.9826295971870422,
+        5.1211700439453125,
+        0.4650897979736328
+      ],
+      "best_checkpoint": "/media/storage2/mdpi/DYDA/checkpoints/hybrid/fold_2/best.pth"
+    }
+  ]
+}
