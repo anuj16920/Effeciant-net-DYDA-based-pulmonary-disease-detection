@@ -4,18 +4,15 @@ data/processed/*
 !data/raw/.gitkeep
 !data/processed/.gitkeep
 
-# Checkpoints
+# Checkpoints (exclude huge optimizer states & backups)
 checkpoints/**/last.pth
 checkpoints/*_prev_run/
 checkpoints/*_backup/
 checkpoints/dyda/fold_*
-checkpoints/hybrid/fold_*
 
-# Outputs
+# Outputs (exclude backup folders)
 outputs/*_prev_run/
 outputs/*_backup/
-outputs/**/history.csv
-outputs/**/val_predictions.csv
 
 # Temporary logs & notes
 *.tmp
